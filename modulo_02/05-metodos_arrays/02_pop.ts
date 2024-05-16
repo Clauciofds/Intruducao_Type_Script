@@ -1,0 +1,1 @@
+const arrayNum: number[] = [12, 1, 45, 76, 100]
