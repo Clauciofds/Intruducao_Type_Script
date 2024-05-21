@@ -18,6 +18,6 @@ const fileList = [
 const antVirus = fileList.some((f) =>{
     // console.log(f)
     return f.includes('.bat')
-})
+}
 
 console.log(antVirus)
