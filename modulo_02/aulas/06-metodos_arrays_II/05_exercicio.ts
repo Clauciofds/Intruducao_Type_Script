@@ -21,3 +21,15 @@ const antVirus = fileList.some((f) =>{
 })
 
 console.log(antVirus)
+
+// const antiVirus1 = (fileList: string[]) => {
+//     const result = fileList.some((f) => {
+//         const exitVirus = f.includes('.bat')
+//         return exitVirus
+//     })
+//     if (result) {
+//         console.log('VIRUS DETECTADO')
+//         return
+//     }
+//     console.log('NENHUM VIRUS DETECTADO')
+// }
