@@ -19,3 +19,5 @@ const filterPeopleList = peopleList.filter((n) => {
 })
 
 console.log(filterPeopleList)
+
+console.table(peopleList)
