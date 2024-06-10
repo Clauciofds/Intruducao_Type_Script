@@ -1,11 +1,9 @@
-import express from 'express'
+import express, { Request, Response } from 'express'
 
 const server = express()
 
-const controler = (request, response) => {
+server.get('/home', (request: Request, response: Response) => {
     return response.send('Hello meu primeiro servidor NodeJS.js com express')
-}
-
-server.get('/home', controler)
+})
 
 server.listen(3000)
