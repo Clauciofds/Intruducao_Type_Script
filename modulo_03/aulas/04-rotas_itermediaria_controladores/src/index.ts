@@ -1,10 +1,15 @@
 import 'dotenv/config'
-import express from 'express'
+import express, { Request, Response, NextFunction } from 'express'
+import { itemProduts, searchUser, searchUserQuery } from './controlers'
+import { intermediaryDefault, myFirstItermediary } from './intermediary'
 
 const server = express()
 
-server.get('/', (req, res) => {
-    return res.send('Server is Ok!')
-})
+server.get('/produts/:item', myFirstItermediary, itemProduts)
+
+server.use(intermediaryDefault)
+
+server.get('/users/:email', searchUser)
+server.get('/users', searchUserQuery)
 
 server.listen(process.env.PORT)
