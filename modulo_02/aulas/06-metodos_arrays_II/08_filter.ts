@@ -14,10 +14,12 @@ const peopleList: TPeople[] = [
     {nome: 'Cleiton', idade: 48}
 ]
 
-const filterPeopleList = peopleList.filter((n) => {
-    return n.idade < 50
-})
+// const filterPeopleList = peopleList.filter((n) => {
+//     return n.idade < 50
+// })
+
+const filterPeopleList = peopleList.filter((n) => n.idade < 50)
 
 console.log(filterPeopleList)
 
-console.table(peopleList)
+// console.table(peopleList)

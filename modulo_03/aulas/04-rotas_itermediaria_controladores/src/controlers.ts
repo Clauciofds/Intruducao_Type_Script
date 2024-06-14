@@ -13,22 +13,20 @@ export const itemProduts = (req: Request, res: Response) => {
 
 export const searchUser =  (req: Request, res: Response) => {
     const { email } = req.params
-    const user = users.find(item => {
-        return item.email === email
-    })
-    if (!email) {
+    const user = users.find((item) => item.email === email)
+    if (!user ) {
         return res.send("User don't exist")
     }
     return res.send(user)
 }
 
 export const searchUserQuery = (req: Request, res: Response) => {
-    const { name } = req.query
-    if (!name) {
+    const { email } = req.query
+    if (!email) {
         return res.send('paramentro não encontrado')
     }
     const user = users.find(item => {
-        return item.name === name
+        return item.email === email
     })
 
     if (!user) {
