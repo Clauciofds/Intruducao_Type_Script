@@ -7,8 +7,9 @@ import {
     updateEmail,
     updateResgistration
 } from './controllers/Instructor'
-import { rmdirSync } from 'fs'
-import { classesRegister } from './controllers/classes'
+import { classesDelete,
+    classesRegister
+} from './controllers/classes'
 
 const routers = Router()
 
@@ -18,6 +19,7 @@ routers.post('/instructors', registerInstructor)
 routers.put('/instructors/:id', updateResgistration)
 routers.delete('/instructors/:id', deleteteResgistration)
 routers.patch('/instructors/:id/updateEmail', updateEmail)
-routers.post('/instructors/:id/classesRegister', classesRegister)
+routers.post('/instructors/:id/classes', classesRegister)
+routers.delete('/instructors/:id/classes/:idClasse', classesDelete)
 
 export default routers
