@@ -1,5 +1,5 @@
 import { Request, Response } from "express"
-import dataBase from '../dataBase'
+import dataBase from '../../dataBase'
 
 export const listInstructors = (req: Request, res: Response) => {
     return res.status(200).json(dataBase.instructors)
