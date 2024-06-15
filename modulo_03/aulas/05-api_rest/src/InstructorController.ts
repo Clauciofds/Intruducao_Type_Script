@@ -34,3 +34,17 @@ export const detailInstructors = (req: Request, res: Response) => {
     }
     return res.status(200).json(instructor)
 }
+
+export const registerInstructor = (req: Request, res: Response) => {
+    const { name, email } = req.body
+
+    const newInstructors = {
+        id: 3,
+        name,
+        email
+    }
+
+    instructors.push(newInstructors)
+
+    return res.status(201).json(newInstructors)
+}
