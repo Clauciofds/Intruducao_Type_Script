@@ -17,6 +17,4 @@ const clacuio: TPessoa = {
 // saudacao(clacuio.nome, idade)
 
 console.log('idade' in clacuio)
-console.log(typeof clacuio.idade);
-
-
+console.log(typeof clacuio.idade)

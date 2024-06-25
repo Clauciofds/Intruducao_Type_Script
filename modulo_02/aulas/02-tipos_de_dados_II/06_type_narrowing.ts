@@ -16,4 +16,4 @@ function soma(num1: number | string, num2: number | string) {
     }
 }
 
-console.log(soma(1, '1'));
+console.log(soma(1, '1'))

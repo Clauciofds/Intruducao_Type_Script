@@ -9,4 +9,4 @@ const usuario={
 
 const { nome, email, endereco:{ numero, rua} }=usuario
 
-console.log(typeof email, rua)
+console.log(typeof email, rua, email)
