@@ -11,7 +11,12 @@ export default class Autor {
     idade: number
 
     constructor(autor: TAuor){
+        this.id = this.gerarId()
         this.nome = autor.nome
         this.idade = autor.idade
+    }
+
+    private gerarId(): string {
+        return uuidv4()
     }
 }
