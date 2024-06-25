@@ -1,4 +1,5 @@
-import { v4 as uuidv4} from 'uuid'
+import { v4 as uuidv4 } from 'uuid'
+import Autor from './Autor'
 
 type TPost = {
     titulo: string
@@ -6,7 +7,7 @@ type TPost = {
     autor: Autor
 }
 
-export default class Autor {
+export default class Post {
     readonly id: string
     titulo: string
     descricacao: string
