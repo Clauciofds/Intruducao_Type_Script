@@ -14,5 +14,6 @@ routes.put('/autores/:id', autorControlador.editar)
 routes.delete('/autores/:id', autorControlador.excluir)
 
 routes.get('/postagens', postControlador.listar)
+routes.get('/postagens/:id', postControlador.detalhar)
 
 export default routes
