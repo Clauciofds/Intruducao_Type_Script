@@ -3,21 +3,21 @@ import Autor from './Autor'
 
 type TPost = {
     titulo: string
-    descricacao: string
+    descricao: string
     autor: Autor
 }
 
 export default class Post {
     readonly id: string
     titulo: string
-    descricacao: string
+    descricao: string
     autor: Autor
     data_criacao: Date
 
     constructor(post: TPost){
         this.id = this.gerarId()
         this.titulo = post.titulo
-        this.descricacao = post.descricacao
+        this.descricao = post.descricao
         this.autor = post.autor
         this.data_criacao = new Date()
     }
