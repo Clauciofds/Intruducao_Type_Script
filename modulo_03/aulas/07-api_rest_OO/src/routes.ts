@@ -17,5 +17,6 @@ routes.get('/postagens', postControlador.listar)
 routes.get('/postagens/:id', postControlador.detalhar)
 routes.post('/postagens/', postControlador.cadastrar)
 routes.patch('/postagens/:id', postControlador.editar)
+routes.delete('/postagens/:id', postControlador.excluir)
 
 export default routes
