@@ -1,5 +1,5 @@
 import { Request, Response } from "express"
-import { addDataBaseJson, readDataBase } from "../utils/readDataBase"
+import { addDataBaseJson, readDataBase } from "../utils/filesUtils"
 import Link from "../models/Link"
 
 export default class RegisterLink {
