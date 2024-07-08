@@ -8,7 +8,7 @@ texto1.then( resultado =>
     console.log(resultado.toString())
 )
 
-const texto2 = fs. readFile('./texto2.txt')
+const texto2 = fs.readFile('./texto2.txt')
 
 texto2.then( resultado => 
     console.log(resultado.toString())
