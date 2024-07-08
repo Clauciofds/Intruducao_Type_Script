@@ -26,14 +26,14 @@ export async function conuterVisits(identificador:string) {
     const linkWhitVisist: Link = {
         identificador: link!.identificador,
         url: link!.url,
-        visitas: link!.visitas++
+        visitas: link!.visitas + 1
     }
 
     const findIndex = data.findIndex( index => 
         index.identificador === identificador
     )
 
-    data.splice(findIndex, 1)
+    data.splice(findIndex, 1, linkWhitVisist)
 
     await fs.writeFile(pathDataBase, JSON.stringify(data, null, '\t'))
 }
