@@ -1,0 +1,12 @@
+services:
+  web1:
+    image: nginx:alpine
+    container_name: test-1
+    ports: 
+      - "8080:80"
+    
+  web2:
+    image: nginx:alpine
+    container_name: test-2
+    ports: 
+      - "8081:80"
