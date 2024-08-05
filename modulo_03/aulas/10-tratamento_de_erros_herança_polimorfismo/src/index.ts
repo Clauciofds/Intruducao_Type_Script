@@ -30,12 +30,19 @@ app.post('/usuario', (req, res) => {
 
         return res.status(201).json({ nome, email })
     } catch (error) {
-        
-        if (error instanceof BadRequestError || error instanceof NotFoundError) {
-            return res.status(error.statusCode).json({
-                message: error.message
-            })
+        const errorsList = [BadRequestError, NotFoundError]
+        for (const item of errorsList){
+            if(error instanceof item){
+                return res.status(error.statusCode).json({
+                    message: error.message
+                })
+            }
         }
+        // if (error instanceof BadRequestError || error instanceof NotFoundError) {
+        //     return res.status(error.statusCode).json({
+        //         message: error.message
+        //     })
+        // }
 
         return res.status(500).json({
             message: 'Erro interno do servidor'
